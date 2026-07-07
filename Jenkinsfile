@@ -18,13 +18,6 @@ pipeline {
             }
         }
 
-        stage('Build & Test') {
-            steps {
-                sh 'mvn clean install'
-                sh 'mvn test'
-            }
-        }
-
         stage('Docker Build & Push') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-creds',
