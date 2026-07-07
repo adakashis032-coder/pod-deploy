@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# start kibana in background if you prefer not to use supervisord
+# If you prefer to start Kibana in background and nginx in foreground:
 # /opt/kibana/bin/kibana &
 
-# start nginx in foreground
-nginx -g "daemon off;"
+# Start supervisord (preferred if using supervisord.conf)
+exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
