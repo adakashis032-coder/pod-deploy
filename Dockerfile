@@ -18,6 +18,10 @@ RUN mkdir -p ${KIBANA_HOME} && \
     mv /opt/kibana-${KIBANA_VERSION}-linux-x86_64 ${KIBANA_HOME} && \
     rm /tmp/kibana.tar.gz
 
+RUN echo "Downloading Kibana version ${KIBANA_VERSION}" && \
+    curl -v "https://artifacts.elastic.co/downloads/kibana/kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz" -o /tmp/kibana.tar.gz && \
+    ls -lh /tmp/kibana.tar.gz
+
 # Copy configs and startup scripts
 COPY kibana.yml ${KIBANA_HOME}/config/kibana.yml
 COPY nginx.conf /etc/nginx/conf.d/default.conf
