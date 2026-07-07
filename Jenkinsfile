@@ -5,10 +5,6 @@ pipeline {
         DOCKER_IMAGE = "adakashis/pod-deploy:${env.BUILD_NUMBER}"
     }
 
-    tools {
-        maven 'Maven-3.8.1'
-    }
-
     stages {
         stage('Checkout App') {
             steps {
