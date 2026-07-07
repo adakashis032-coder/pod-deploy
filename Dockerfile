@@ -1,7 +1,7 @@
 # Dockerfile (nginx + kibana in one container)
 FROM ubuntu:22.04
 
-ENV KIBANA_VERSION=8.10.0
+ENV KIBANA_VERSION=8.15.0
 ENV KIBANA_HOME=/opt/kibana
 ENV DEBIAN_FRONTEND=noninteractive
 
