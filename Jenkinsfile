@@ -37,14 +37,6 @@ pipeline {
             }
         }
 
-        stage('Deploy App') {
-            steps {
-                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
-                    sh "kubectl --kubeconfig=$KUBECONFIG set image deployment/gcp-maven-ingress-kube gcp-maven-ingress-kube=$DOCKER_IMAGE"
-                    sh "kubectl --kubeconfig=$KUBECONFIG rollout status deployment/gcp-maven-ingress-kube --timeout=60s"
-                }
-            }
-        }
 
         stage('Checkout Manifests') {
             steps {
