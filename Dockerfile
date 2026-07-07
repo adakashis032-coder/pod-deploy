@@ -16,7 +16,7 @@ RUN mkdir -p ${KIBANA_HOME} && \
     curl -fsSL "https://artifacts.elastic.co/downloads/kibana/kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz" -o /tmp/kibana.tar.gz && \
     tar -xzf /tmp/kibana.tar.gz -C /opt && \
     mv /opt/kibana-${KIBANA_VERSION}-linux-x86_64 ${KIBANA_HOME} && \
-    rm /tmp/kibana.tar.gz
+    
 
 RUN echo "Downloading Kibana version ${KIBANA_VERSION}" && \
     curl -v "https://artifacts.elastic.co/downloads/kibana/kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz" -o /tmp/kibana.tar.gz && \
