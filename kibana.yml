@@ -20,7 +20,7 @@ spec:
         - containerPort: 5601
         env:
         - name: ELASTICSEARCH_HOSTS
-          value: "https://elasticsearch-0.monitoring.svc.cluster.local:9200"
+          value: "http://elasticsearch-0.monitoring.svc.cluster.local:9200"
         - name: ELASTICSEARCH_SERVICEACCOUNTTOKEN
           value: "AAEAAWVsYXN0aWMva2liYW5hL215LWtpYmFuYS10b2tlbjpKbGE5YTIzTlJlQ2I2QjNidUZRSmJ3"
 ---
