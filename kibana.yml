@@ -27,7 +27,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: elastic-credentials
-              key: password
+              key: wEbNP0S0NERICcZO0mPV
 ---
 apiVersion: v1
 kind: Service
